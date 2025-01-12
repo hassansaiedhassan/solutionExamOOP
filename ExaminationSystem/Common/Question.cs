@@ -9,13 +9,15 @@ namespace ExaminationSystem.Common
 {
     internal abstract  class Question
     {
-      
-         public string ?HeaderQuestion { get; set; }
+
+        #region properties
+        public string? HeaderQuestion { get; set; }
         public string? BodyQuestion { get; set; }
         public double Mark { get; set; }
-        
-        public Answer[] ?AnswerList { get; set; }
-        
+
+        public Answer[]? AnswerList { get; set; } 
+        #endregion
+
         public abstract void AssignQuestion();
 
     }

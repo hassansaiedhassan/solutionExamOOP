@@ -10,6 +10,7 @@ namespace ExaminationSystem.Common
     {
         public PracitcalExam(int numberOfQuestions, double time, string subjectName) : base(numberOfQuestions, time, subjectName) { }
 
+        #region GenerateExam
         public override void GenerateExam()
         {
             for (int i = 0; i < NumberOfQuestions; i++)
@@ -17,6 +18,7 @@ namespace ExaminationSystem.Common
                 Questions[i] = new TrueOrFalse();
                 Questions[i].AssignQuestion();
             }
-        }
+        } 
+        #endregion
     }
 }

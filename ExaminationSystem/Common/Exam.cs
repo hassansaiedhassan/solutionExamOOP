@@ -29,6 +29,7 @@ namespace ExaminationSystem.Common
 
         }
 
+        #region Method
         public abstract void GenerateExam();
 
         public void TakeExam()
@@ -120,7 +121,8 @@ namespace ExaminationSystem.Common
         private string GetCorrectAnswer(Question question)
         {
             return question.AnswerList.FirstOrDefault(a => a.IsCorrect)?.AnswerText ?? "No correct answer found.";
-        }
+        } 
+        #endregion
 
     }
 }

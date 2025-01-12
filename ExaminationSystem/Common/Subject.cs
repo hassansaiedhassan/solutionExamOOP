@@ -13,6 +13,7 @@ namespace ExaminationSystem.Common
 {
     internal class Subject
     {
+        #region properties
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? AnswerText { get; set; }
@@ -22,6 +23,7 @@ namespace ExaminationSystem.Common
         //    Name = name;    
         //}
 
+        #endregion
 
     }
 }
