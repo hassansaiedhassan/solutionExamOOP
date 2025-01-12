@@ -11,6 +11,7 @@ namespace ExaminationSystem.Common
     {
         public FinalExam(int numberOfQuestions, double time, string subjectName) : base(numberOfQuestions, time, subjectName) { }
 
+        #region GenerateExam
         public override void GenerateExam()
         {
             for (int i = 0; i < NumberOfQuestions; i++)
@@ -25,6 +26,7 @@ namespace ExaminationSystem.Common
                 Questions[i] = type == 1 ? new TrueOrFalse() : new MCQ();
                 Questions[i].AssignQuestion();
             }
-        }
+        } 
+        #endregion
     }
 }

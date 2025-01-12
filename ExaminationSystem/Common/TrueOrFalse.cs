@@ -8,7 +8,8 @@ namespace ExaminationSystem.Common
 {
     internal class TrueOrFalse:Question
     {
-         public override void AssignQuestion()
+        #region AssignQuestion
+        public override void AssignQuestion()
         {
             Console.WriteLine("True|False Question");
             Console.WriteLine("Please Enter Header Of Question:");
@@ -24,7 +25,7 @@ namespace ExaminationSystem.Common
                 Console.WriteLine("Please Enter a valid positive number.");
             }
             Mark = mark;
-           
+
             Console.WriteLine("Please Enter The Right Answer of the Question (1 for True and 2 for False):");
             int answer;
             while (!int.TryParse(Console.ReadLine(), out answer) || answer < 1 || answer > 2)
@@ -37,6 +38,7 @@ namespace ExaminationSystem.Common
             new Answer(1, "True") { IsCorrect = answer == 1 },
             new Answer(2, "False") { IsCorrect = answer == 2 }
             };
-        }
+        } 
+        #endregion
     }
 }
